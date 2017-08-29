@@ -92,6 +92,16 @@ namespace ArrayPractice
             //            0         1          2          3               
             Console.WriteLine(firstName[3]);   //prints Ian
 
+            //Jordan:
+            string[] firstNames = new string[5];
+            firstNames[0] = "Jordan";
+            firstNames[1] = "Carrie";
+            firstNames[2] = "Jarryd";
+            firstNames[3] = "Kacy";
+            firstNames[4] = "Mel";
+
+            Console.WriteLine(Array.IndexOf(firstNames,"Mel"));
+
             //Create an array of lucky numbers. Each number should repeat at least once. 
             //Choose a lucky number, find and print the last index of it.
             int[] luckyNumber = { 8, 2, 22, 25, 1, 16 };
@@ -100,9 +110,15 @@ namespace ArrayPractice
             //Create an array of alphabet characters. Print the first index of the array. Now reverse the array and print the first index.
             char[] alphaCharacter = { 'c', 'd', 'k', 'i', 'h'};
             //                         0    1    2    3
-            Console.WriteLine(alphaCharacter[1]);  //prints d
+            Console.WriteLine(alphaCharacter[0]);  //prints c
             Array.Reverse(alphaCharacter);
-            Console.WriteLine(alphaCharacter[1]);  //prints i
+            Console.WriteLine(alphaCharacter[0]);  //prints h
+
+            //Jordans'
+            char[] alphabet = { 'a', 'b', 'c' };
+            Console.WriteLine(alphabet[0]); //
+            //Array.Reverse(alphabet[0]); 
+            Console.WriteLine(alphabet[0]);
 
             //Create an array of student names in random order. 
             //Order the students’ names using the sort method. Print the first and last students’ names.
@@ -111,13 +127,30 @@ namespace ArrayPractice
             Console.WriteLine(studentNames[0]); //prints: Colleen
             Console.WriteLine(studentNames[3]); //prints: Karen      sorts alphabetically: Colleen, Elizabeth, Karen, Ian
 
+            //Jordans:
+            string[] studentsInClass = { "Daniel", "Max", "Joyce", "Richard", "adam"};
+            Console.WriteLine(studentsInClass[0]);  //prints: Daniel
+            Array.Sort(studentsInClass);
+            Console.WriteLine(studentsInClass[0]);     //prints: adam   //lower case comes first
+
             //Ask 10 people for their favorite numbers and create an array of those numbers. 
             //Order the numbers using the sort method. Print the first and last numbers.
             int[] favNumbers = { 8, 2, 22, 25, 1, 16 };
             Array.Sort(favNumbers);
             Console.WriteLine(favNumbers[0]);  //prints: 1
             Console.WriteLine(favNumbers[5]);  //prints: 25
-        
+
+            //Jordan's
+            int[] favoriteNumbers = { 15, 7, 22, 5, 43, 45, 23, 3, 42, 17 };
+            Array.Sort(favoriteNumbers);
+            Console.WriteLine(favoriteNumbers[0] + " " + favoriteNumbers[favoriteNumbers.Length-1]); //prints: 3  45
+
+            //Review - what is an array: a list of sequence items, that has a zero index, not sorted on their own (whatever order you enter them in)
+            //easy way to sort a large list of items, 
+            //array is a fixed length - like: # of seats in stadium, days of the week, # of doors on your car
+            //when you DON'T know what your elements will be use the NEW keyword
+            //when you know the elements upfront, you will initalize the array
+            //would not want to use: inventory list - could change, 
 
 
 
